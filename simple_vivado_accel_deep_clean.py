@@ -56,6 +56,7 @@ for key in cur_config['LayerName'].keys():
 
 for key, value in layer_rufactors.items(): 
   cur_config['LayerName'][key]['ReuseFactor'] = value
+  cur_config['LayerName'][key]['Strategy'] = 'Latency'
 
 # construct hls_model. This is basically same as we have been doing, but 
 #    with the extra paramters meant to put it on the correct board
