@@ -1,0 +1,227 @@
+AcceleratorConfig:
+  Board: alveo-u250
+  Driver: python
+  Interface: axi_stream
+  Platform: xilinx_u250_xdma_201830_2
+  Precision:
+    Input: float
+    Output: float
+Backend: VivadoAccelerator
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    activation:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_1:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_2:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_3:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_4:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_5:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_6:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_7:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    activation_8:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    batch_normalization:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_1:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_2:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_3:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_4:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_5:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_6:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_7:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    batch_normalization_8:
+      Precision:
+        bias: ap_fixed<16, 2>
+        scale: ap_fixed<16, 2>
+      ReuseFactor: 256
+    conv_1:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 21
+    conv_1_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    conv_2:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 28
+    conv_2_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    conv_3:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 56
+    conv_3_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    conv_4:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 224
+    conv_4_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    convtr_1:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 256
+    convtr_1_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    convtr_2:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 64
+    convtr_2_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    convtr_3:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 32
+    convtr_3_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    convtr_4:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 16
+    convtr_4_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    input_conv:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 21
+    input_conv_input:
+      Precision:
+        result: ap_fixed<16, 2>
+    input_conv_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+    output_conv:
+      Precision:
+        bias: ap_fixed<16, 2>
+        result: ap_fixed<16, 2>
+        weight: ap_fixed<16, 2>
+      ReuseFactor: 21
+    output_conv_linear:
+      Precision: ap_fixed<16, 2>
+      ReuseFactor: 256
+      table_size: 1024
+      table_t: ap_fixed<16, 2>
+  Model:
+    Precision: ap_fixed<16, 2>
+    ReuseFactor: 256
+    Strategy: Resource
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model 'models/deep-clean-vivado-accel-g/keras_model.h5'
+OutputDir: models/deep-clean-vivado-accel-g
+OutputPredictions: null
+Part: xcu250-figd2104-2L-e
+ProjectName: myproject
+Stamp: 5D592Cf8
