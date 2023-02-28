@@ -32,7 +32,10 @@ model = keras.models.load_model('keras_deep_clean')
 # model.save('keras_deep_clean.h5')
 
 cur_config = hls4ml.utils.config_from_keras_model(model, granularity='name')
-cur_config['Model']['Strategy'] ='Resource'
+cur_config['Flows'] = ['vivadoaccelerator:fifo_depth_optimization']
+hls4ml.model.optimizer.get_optimizer('vivado:fifo_depth_optimization').configure(profiling_fifo_depth=100_000)
+
+cur_config['Model']['Strategy'] ='Latency'
 cur_config['Model']['Precision'] = f'ap_fixed<{ib+fb}, {ib}>'
 
 cur_config['Model']['ReuseFactor'] = ru_factor 
@@ -75,7 +78,7 @@ y_hls = hls_model.predict(input_arr)
 np.save(hls_predict_dir, y_hls)
 
 # synthesize the model
-hls_model.build(csim=False, export=True)
+hls_model.build(csim=False, vsynth=True, export=True)
 
 # make the xclbin for the model
 hls_model.config.backend.make_xclbin(hls_model)
