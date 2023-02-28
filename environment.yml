@@ -1,0 +1,9 @@
+name: deepclean
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - tensorflow
+    - git+https://github.com/Jonathan-Shoemaker/hls4ml@conv_tr_parallel#egg=hls4ml[profiling]

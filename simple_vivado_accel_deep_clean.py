@@ -29,6 +29,7 @@ ru_factor = 256
 
 # made in reconstruct_deep_clean (has correct wts)
 model = keras.models.load_model('keras_deep_clean') 
+# model.save('keras_deep_clean.h5')
 
 cur_config = hls4ml.utils.config_from_keras_model(model, granularity='name')
 cur_config['Model']['Strategy'] ='Resource'
